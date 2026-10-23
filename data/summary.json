@@ -1,0 +1,25 @@
+{
+  "built": "2026年10月23日",
+  "sources": {
+    "positivedb": "2026年10月23日",
+    "shokuba": "2026年10月23日"
+  },
+  "base": "/tsushinbo/",
+  "pages": 34010,
+  "companies": 32921,
+  "rankable": 27535,
+  "sourceRows": {
+    "positivedbRows": 63846,
+    "shokubaRows": 152439,
+    "merged": 65381
+  },
+  "metrics": {
+    "zangyo": 16994,
+    "yukyu": 13424,
+    "ikukyu": 17433,
+    "kinzoku": 17604,
+    "kanri": 31831,
+    "chingin": 26673,
+    "rishoku": 478
+  }
+}

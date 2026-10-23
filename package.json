@@ -1,0 +1,12 @@
+{
+  "name": "kaisha-tsushinbo",
+  "private": true,
+  "type": "module",
+  "description": "会社の通信簿：会社が国のデータベースで公表した働きやすさの数字を5段階評定にする静的サイト",
+  "scripts": {
+    "fetch": "bash scripts/fetch.sh",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
