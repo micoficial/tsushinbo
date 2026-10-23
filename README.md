@@ -29,7 +29,8 @@ node scripts/serve.mjs     # http://localhost:4173/tsushinbo/ で確認
 - `scripts/lib/grade.mjs`：代表値の選び方、比較グループ（業種×規模帯、30社未満なら全業種の規模帯）、評定（上位7/31/69/93%で区切る相対評価）
 - `scripts/lib/text.mjs`：会社ページの「ひとことで言うと」とよくある質問の文
 - `scripts/pages/`：会社ページ（`company.mjs`）、ランキング・都道府県・業種・トップなど（`hubs.mjs`）
-- `.github/workflows/deploy.yml`：push と毎週月曜3時（日本時間）に、最新データで作り直して GitHub Pages に出す。`data/summary.json` を毎回コミットするので、定期実行が60日で止まることもない
+- `.github/workflows/deploy.yml`：push と毎週月曜3時（日本時間）に作り直して GitHub Pages に出す。`data/summary.json` を毎回コミットするので、定期実行が60日で止まることもない
+- **国のサイトは海外からのアクセスを 403 で断る**ので、GitHub Actions では直接取れない。そのときはリリース `data-latest` の控え（`raw-data.tar.gz`）を使う。控えは日本の回線で `GH_TOKEN=... bash scripts/refresh-data.sh` を実行すると差し替わり、作り直しも始まる
 
 ## 注意
 
