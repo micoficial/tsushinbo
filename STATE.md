@@ -27,7 +27,8 @@ Jの依頼：「AIで完全に作れて、一般の人には取りにくく、�
 - 厚労省の2サイトは **GitHub Actions（海外のサーバー）からだと 403**（2026-10-23 の初回実行で判明）。日本の回線（このPC）からは取れる
 - そこで、日本の回線で取ったCSVをリリース `data-latest` の `raw-data.tar.gz` に置き、Actions は直接取れなければそれを使う
 - 控えの更新：このPCで `GH_TOKEN=$(gh auth token --user mico95official-create) bash scripts/refresh-data.sh`（取得→控え差し替え→作り直し開始まで自動）
-- 控えを更新しない限り、毎週の作り直しは同じデータのまま。週1でこのPCから回す仕組み（Windowsのタスク スケジューラなど）を置くかはJの判断待ち
+- **このPCのタスク スケジューラ「mico-tsushinbo-data-refresh」**が毎週月曜9時（PCが切れていたら次の起動時）に `scripts/scheduled-refresh.sh` を実行する（Jが2026-10-23に許可）。ログは `data/refresh.log`。動作確認だけなら `bash scripts/scheduled-refresh.sh --check`
+- Search Console：2026-10-23 に URLプレフィックス `https://micoficial.github.io/tsushinbo/` を登録（HTMLファイルで自動確認）。`sitemap.xml`・`sitemap-hubs.xml`・`sitemap-companies-1.xml` を送信。直後の状態は「取得できませんでした」（新規プロパティでよくある表示）→ 数日後に再確認する
 
 ## 試して駄目だったこと
 - 日本郵便の郵便番号データ（市区町村ページ用）：`/zipcode/dl/utf/zip/utf_ken_all.zip` などが 404（2026-10-23）。市区町村ページは見送り

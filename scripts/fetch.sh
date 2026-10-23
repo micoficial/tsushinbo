@@ -23,9 +23,13 @@ get() {
 
 if get positivedb.zip "https://positive-ryouritsu.mhlw.go.jp/positivedb/opendata/download_nb.html?w=99" \
   && get shokuba.zip "https://shokuba.mhlw.go.jp/shokuba/utilize/download010?lang=JA"; then
+  # 別の作業がデータを読んでいても壊れにくいよう、展開してから差し替える
+  rm -rf positivedb.new shokuba.new
+  unzip -q -o positivedb.zip -d positivedb.new
+  unzip -q -o shokuba.zip -d shokuba.new
   rm -rf positivedb shokuba
-  unzip -q -o positivedb.zip -d positivedb
-  unzip -q -o shokuba.zip -d shokuba
+  mv positivedb.new positivedb
+  mv shokuba.new shokuba
   rm -f positivedb.zip shokuba.zip
   echo "国のサイトから取得しました"
 else
