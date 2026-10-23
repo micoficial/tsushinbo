@@ -126,6 +126,8 @@ fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(DIST, { recursive: true });
 const ASSETS_SRC = path.join(ROOT, 'src', 'assets');
 fs.cpSync(ASSETS_SRC, path.join(DIST, 'assets'), { recursive: true });
+// サイト直下に置くファイル（Search Console の確認ファイル、IndexNow のキー）
+fs.cpSync(path.join(ROOT, 'src', 'root'), DIST, { recursive: true });
 const hash = crypto.createHash('sha1');
 for (const f of ['style.css', 'app.js']) hash.update(fs.readFileSync(path.join(ASSETS_SRC, f)));
 setAssetVersion(hash.digest('hex').slice(0, 8));
