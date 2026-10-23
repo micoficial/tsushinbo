@@ -196,6 +196,9 @@ const summary = {
   built, sources, base: BASE, pages, companies: published.length, rankable: rankable.length,
   sourceRows: counts, metrics: Object.fromEntries(METRICS.map((m) => [m.key, all.filter((c) => c.m[m.key] && !c.m[m.key].invalid).length])),
 };
-fs.mkdirSync(path.join(ROOT, 'data'), { recursive: true });
-fs.writeFileSync(path.join(ROOT, 'data', 'summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
+// 記録ファイルは GitHub Actions で全件を作ったときだけ書く（手元の試しの結果でリポジトリを汚さない）
+if (process.env.GITHUB_ACTIONS === 'true' && !LIMIT) {
+  fs.mkdirSync(path.join(ROOT, 'data'), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, 'data', 'summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
+}
 log('done', summary);
