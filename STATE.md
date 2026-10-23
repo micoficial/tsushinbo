@@ -3,9 +3,10 @@
 最終更新：2026-10-23
 
 ## いまの状態
-- サイト一式は完成。掲載 32,921社（評定できる項目が2つ以上、または301人以上で1つ以上）、全34,010ページ、約5.5億バイト
-- 公開先：`micoficial/tsushinbo`（GitHub Pages、Actions で毎週月曜3時に自動更新）
-- アクセス解析なし（Cookieなし）。Search Console は未登録
+- **2026-10-23 公開済み**：https://micoficial.github.io/tsushinbo/ （リポジトリ `micoficial/tsushinbo`、GitHub Pages を Actions で配信）
+- 掲載 32,921社（評定できる項目が2つ以上、または301人以上で1つ以上）、全34,010ページ、約5.5億バイト。データは 2026-10-23 時点
+- サイト直下に Search Console の確認ファイル（`google08ebf2cdcabb4d55.html`、ai-fuseji と同じもの）と IndexNow のキーを置いた。**Search Console への登録とサイトマップ送信はまだ**（Jの Google アカウントの操作）
+- アクセス解析なし（Cookieなし）
 
 ## なぜこのテーマか（2026-10-23 決定）
 Jの依頼：「AIで完全に作れて、一般の人には取りにくく、本来は有料のサービスにある情報を、AIだからこそ無料で出し、圧倒的なアクセスを取る」
