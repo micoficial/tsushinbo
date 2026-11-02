@@ -1,25 +1,25 @@
 {
   "built": "2026年11月2日",
   "sources": {
-    "positivedb": "2026年10月26日",
-    "shokuba": "2026年10月25日"
+    "positivedb": "2026年11月2日",
+    "shokuba": "2026年11月1日"
   },
   "base": "/tsushinbo/",
-  "pages": 34093,
-  "companies": 33004,
-  "rankable": 27607,
+  "pages": 34415,
+  "companies": 33323,
+  "rankable": 27872,
   "sourceRows": {
-    "positivedbRows": 63889,
-    "shokubaRows": 152444,
-    "merged": 65426
+    "positivedbRows": 64084,
+    "shokubaRows": 155261,
+    "merged": 65625
   },
   "metrics": {
-    "zangyo": 17003,
-    "yukyu": 13445,
-    "ikukyu": 17452,
-    "kinzoku": 17615,
-    "kanri": 31928,
-    "chingin": 26779,
-    "rishoku": 479
+    "zangyo": 17051,
+    "yukyu": 13525,
+    "ikukyu": 17516,
+    "kinzoku": 17671,
+    "kanri": 32287,
+    "chingin": 27134,
+    "rishoku": 482
   }
 }
